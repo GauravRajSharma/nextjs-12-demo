@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-export default function SingleBlogPage(...props) {
+export default function SingleBlogPage() {
   const { query } = useRouter();
 
   return (
