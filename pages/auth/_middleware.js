@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-import { parse } from "cookie";
+import { parse } from "https://cdn.skypack.dev/cookie";
+
 import * as crypto from "crypto";
 
 const ADMIN_HASHED_PASSWORD = crypto
@@ -9,7 +10,7 @@ const ADMIN_HASHED_PASSWORD = crypto
     JSON.stringify({
       username: "admin",
       passsword: "password",
-    }),
+    })
   )
   .digest("hex");
 

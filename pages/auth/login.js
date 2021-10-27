@@ -1,7 +1,13 @@
 import { useRouter } from "next/router";
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
+import { useEffect } from "react";
 
 export default function LoginPage() {
   const { query } = useRouter();
+
+  useEffect(() => {
+    Array.from({ length: 1 }).forEach(confetti);
+  }, []);
   return (
     <>
       <div className="container">

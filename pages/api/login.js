@@ -2,7 +2,7 @@
 
 import * as crypto from "crypto";
 
-import { serialize } from "cookie";
+import { serialize } from "https://cdn.skypack.dev/cookie";
 
 function getAuthEndpoint(nextUrl = "") {
   return Boolean(nextUrl) ? `/auth/login?next=${nextUrl}` : "/auth/login";
@@ -19,7 +19,7 @@ export default (req, res) => {
           JSON.stringify({
             username: "admin",
             passsword: "password",
-          }),
+          })
         )
         .digest("hex");
 
